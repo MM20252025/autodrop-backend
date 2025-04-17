@@ -1,9 +1,10 @@
+
 {
   "name": "autodrop-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,4 @@
   },
   "homepage": "https://github.com/MM20252025/autodrop-backend#readme",
   "description": ""
-}
-{
-  "name": "autodrop-backend",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "node index.js"
-  }
 }
