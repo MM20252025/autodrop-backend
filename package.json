@@ -1,11 +1,9 @@
-const http = require('http');
-
-const PORT = process.env.PORT || 10000;
-
-const server = http.createServer((req, res) => {
-  res.end('AutoDrop backend działa!');
-});
-
-server.listen(PORT, () => {
-  console.log(`AutoDrop backend działa na porcie ${PORT}`);
-});
+{
+  "name": "autodrop-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "ISC"
+}
