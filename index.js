@@ -1,18 +1,17 @@
-// index.js
-console.log("✅ AutoDrop backend działa!");
-
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("AutoDrop backend działa 🐙");
+  res.send("AutoDrop backend działa 💡");
 });
 
-// 👉 Nowy endpoint /ping
 app.get("/ping", (req, res) => {
-  res.json({ message: "pong" });
+  res.json({ pong: true });
 });
 
 app.listen(PORT, () => {
