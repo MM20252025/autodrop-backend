@@ -5,9 +5,20 @@
   "scripts": {
     "start": "node index.js"
   },
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
-  }
+  "license": "ISC"
+}
+const express = require("express");
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("AutoDrop backend działa 🛠️");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+"scripts": {
+  "start": "node index.js"
 }
