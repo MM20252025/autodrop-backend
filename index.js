@@ -3,9 +3,12 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-app.use(cors());
+// ✅ Zezwól tylko na frontend z Render
+app.use(cors({
+  origin: 'https://autodrop-build.onrender.com'
+}));
 
-// <-- Tutaj endpoint /products
+// Endpoint produktów
 app.get("/products", (req, res) => {
   res.json([
     {
@@ -17,7 +20,7 @@ app.get("/products", (req, res) => {
     {
       id: 2,
       name: "Słuchawki Bluetooth",
-      price: 89.90,
+      price: 80.90,
       image: "https://via.placeholder.com/150",
     },
     {
@@ -29,8 +32,7 @@ app.get("/products", (req, res) => {
   ]);
 });
 
-// <-- Dopiero potem listen
+// Uruchom serwer
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
