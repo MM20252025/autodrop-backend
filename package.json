@@ -1,21 +1,11 @@
+const http = require('http');
 
-{
-  "name": "autodrop-backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MM20252025/autodrop-backend.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MM20252025/autodrop-backend/issues"
-  },
-  "homepage": "https://github.com/MM20252025/autodrop-backend#readme",
-  "description": ""
-}
+const PORT = process.env.PORT || 10000;
+
+const server = http.createServer((req, res) => {
+  res.end('AutoDrop backend działa!');
+});
+
+server.listen(PORT, () => {
+  console.log(`AutoDrop backend działa na porcie ${PORT}`);
+});
