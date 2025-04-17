@@ -18,3 +18,10 @@
   "homepage": "https://github.com/MM20252025/autodrop-backend#readme",
   "description": ""
 }
+{
+  "name": "autodrop-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
