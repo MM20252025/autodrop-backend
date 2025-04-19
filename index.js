@@ -36,6 +36,19 @@ app.get("/products", (req, res) => {
   ]);
 });
 
+// 📬 Endpoint do składania zamówień
+app.post("/order", (req, res) => {
+  const { name, email, items } = req.body;
+  console.log("Nowe zamówienie:", { name, email, items });
+  
+  // ← tutaj możesz dodać zapis do bazy, wysyłkę maila, walidację itp.
+  
+  return res.json({
+    success: true,
+    message: "Zamówienie przyjęte",
+  });
+});
+
 // 🚀 Uruchomienie serwera
 app.listen(PORT, () => {
   console.log(`✅ Server is running on port ${PORT}`);
